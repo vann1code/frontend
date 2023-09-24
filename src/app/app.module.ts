@@ -8,6 +8,9 @@ import { UploadComponent } from './upload/upload.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ApiService } from './upload/api-service';
 import { HttpClientModule } from '@angular/common/http';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
 
 @NgModule({
   declarations: [
@@ -19,6 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatProgressSpinnerModule,
+    MatInputModule,
+    MatFormFieldModule,
     HttpClientModule
   ],
   providers: [ApiService],

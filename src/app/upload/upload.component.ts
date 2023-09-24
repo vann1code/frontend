@@ -30,29 +30,17 @@ export class UploadComponent {
       this.apiService.fazerRequisicaoPost(formData).subscribe(
         (response) => {
           console.log('Resposta da API:', response);
-          this.isSuccess = true; // Define sucesso
+          this.isSuccess = true;
         },
         (error) => {
           console.error('Erro na requisição:', error);
-          this.isError = true; // Define erro
+          this.isError = true;
         }
       );
 
       setTimeout(() => {
-             this.showLoader = false; // Oculta o loader após o envio
+             this.showLoader = false;
            }, 2000);
     }
-
-    // if (this.selectedFile) {
-    //   this.showLoader = true; // Mostra o loader enquanto o arquivo está sendo enviado
-    //   // Implemente aqui o código para enviar o arquivo ao servidor.
-    //   console.log('Arquivo selecionado:', this.selectedFile);
-    //   // Você pode adicionar a lógica de envio do arquivo para o back-end aqui.
-    //   setTimeout(() => {
-    //     this.showLoader = false; // Oculta o loader após o envio
-    //   }, 2000);
-    // } else {
-    //   console.error('Nenhum arquivo selecionado.');
-    // }
   }
 }

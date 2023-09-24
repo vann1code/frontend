@@ -1,0 +1,24 @@
+.envio {
+    display:flexbox;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+
+.spin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    margin-right: 10px; 
+}
+
+.select {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+
+}

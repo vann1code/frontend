@@ -1,18 +1,20 @@
-<div>
-    <h2>Envio de Arquivos XML</h2>
-    <input type="file" (change)="onFileSelected($event)" multiple accept=".xml" />
-    <button mat-raised-button (click)="uploadFile()">Enviar</button>
+<div class="envio">
+    <h2 class="mat-h2">Envio de Arquivos XML</h2>
 
-    <mat-spinner *ngIf="showLoader" diameter="50" color="primary"></mat-spinner>
+    <div class="select">
+        <input type="file" (change)="onFileSelected($event)" multiple accept=".xml" class="input" />
+        <button mat-raised-button color="primary" (click)="uploadFile()">Enviar</button>
+    </div>
 
-</div>
+    <div class="spin">
+        <mat-spinner *ngIf="showLoader" diameter="50"></mat-spinner>
+    </div>
 
-<div *ngIf="isSuccess" class="success-message">
-    <!-- Mensagem de sucesso aqui -->
-    Upload conclu&iacute;do com sucesso!
-</div>
+    <div *ngIf="isSuccess" class="success-message">
+        Upload concluído com sucesso!
+    </div>
+    <div *ngIf="isError" class="error-message">
+        Ocorreu um erro durante o upload.
+    </div>
 
-<div *ngIf="isError" class="error-message">
-    <!-- Mensagem de erro aqui -->
-    Ocorreu um erro durante o upload.
 </div>
