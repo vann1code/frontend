@@ -1,3 +1,5 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 .envio {
     display:flexbox;
     text-align: center;
@@ -14,7 +16,8 @@
 }
 
 .input {
-    margin-right: 10px; 
+         margin-right: 10px; 
+
 }
 
 .select {

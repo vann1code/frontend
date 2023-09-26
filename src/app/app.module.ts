@@ -10,6 +10,8 @@ import { ApiService } from './upload/api-service';
 import { HttpClientModule } from '@angular/common/http';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+
 
 
 @NgModule({
@@ -24,6 +26,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatProgressSpinnerModule,
     MatInputModule,
     MatFormFieldModule,
+    MatButtonModule,
     HttpClientModule
   ],
   providers: [ApiService],
