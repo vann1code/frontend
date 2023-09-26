@@ -10,8 +10,9 @@ export class UploadComponent {
 
   constructor(private apiService: ApiService) { }
 
-  showLoader: boolean = false;
   selectedFile: File[] = [];
+  isLoading = false;
+  isComplete = false;
   isSuccess = false;
   isError = false;
 
@@ -20,7 +21,7 @@ export class UploadComponent {
   }
 
   uploadFile() {
-     this.showLoader = true;
+    this.isLoading = true;
     this.isSuccess = false;
     this.isError = false;
 
@@ -31,16 +32,14 @@ export class UploadComponent {
         (response) => {
           console.log('Resposta da API:', response);
           this.isSuccess = true;
+          this.isLoading = false;
         },
         (error) => {
           console.error('Erro na requisição:', error);
           this.isError = true;
+          this.isLoading = false;
         }
       );
-
-      setTimeout(() => {
-             this.showLoader = false;
-           }, 2000);
     }
   }
 }

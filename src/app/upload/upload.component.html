@@ -7,12 +7,13 @@
     </div>
 
     <div class="spin">
-        <mat-spinner *ngIf="showLoader" diameter="50"></mat-spinner>
+        <mat-spinner *ngIf="isLoading" diameter="50"></mat-spinner>
     </div>
 
     <div *ngIf="isSuccess" class="success-message">
         Upload concluído com sucesso!
     </div>
+
     <div *ngIf="isError" class="error-message">
         Ocorreu um erro durante o upload.
     </div>
